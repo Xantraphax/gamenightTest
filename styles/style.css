@@ -1,0 +1,108 @@
+body {
+	background-color: beige; /* Hintergrundfarbe */
+	margin: 0;
+	height: 100vh; /* Volle Höhe des Fensters */
+	display: flex; /* Aktiviert Flexbox */
+	justify-content: center; /* Horizontale Zentrierung */
+	align-items: center; /* Vertikale Zentrierung */
+	font-family: 'Lobster', cursive; /* Schriftart Lobster */
+}
+
+h1{
+	font-size:calc(1rem + 1vw *4)
+}
+
+p{
+	font-size: calc(1rem + 1vw ); /* Schriftgröße passt sich dynamisch an */
+	color: #800020;
+}
+
+/* Inhalt */
+.content {
+	width: 90%; /* Passt sich der Breite des Viewports an */
+	height: 90%; /* Passt sich der Höhe des Viewports an */ 	
+	box-sizing: border-box; /* Schließt Padding und Rahmen in den Gesamtmaßen ein */
+	position: static; /* Erlaubt absolute Positionierung von Kindern */
+	text-align: center; /* Text im Container zentrieren */
+	padding: 20px;
+	border: 3px solid #05a895;
+	display: flex; /* Aktiviert Flexbox */
+	justify-content: center; /* Zentriert horizontal */
+	align-items: center; /* Zentriert vertikal */
+	gap: 1%;
+	flex-direction: column;
+}
+
+.top-right{
+	display: flex;
+	position: absolute; /* Positionierung relativ zum Eltern-Element (.content) */
+	top: 0%; /* Abstand von oben */
+	right: 8%; /* Abstand von rechts */
+	transform: rotate(45deg);
+	font-family: 'Lobster';
+	flex-direction: column;
+	justify-content: center; /* Zentriert horizontal */
+	align-items: center; /* Zentriert vertikal */
+	gap: 1px;
+	max-width: 20%;  /* Container skaliert mit der Seite */
+    height: auto;
+}
+
+.bottom-left{
+	display: flex;
+	position: absolute; /* Positionierung relativ zum Eltern-Element (.content) */
+	bottom: 2%; /* Abstand von oben */
+	left: 5%; /* Abstand von rechts */
+	font-family: 'Lobster';
+	flex-direction: column;
+	justify-content: center; /* Zentriert horizontal */
+	align-items: center; /* Zentriert vertikal */
+	gap: 1px;
+	max-width: 20%;  /* Container skaliert mit der Seite */
+    height: auto;
+}
+
+.bottom-right{
+	display: flex;
+	position: absolute; /* Positionierung relativ zum Eltern-Element (.content) */
+	bottom: 0; /* Abstand von oben */
+	right: 8%; /* Abstand von rechts */
+	font-family: 'Lobster';
+	flex-direction: column;
+	justify-content: center; /* Zentriert horizontal */
+	align-items: center; /* Zentriert vertikal */
+	gap: 1px;
+	max-width: 20%;  /* Container skaliert mit der Seite */
+    height: auto;
+}
+
+.arrow{
+	width: 15%; /* Bild passt sich an die Breite des Containers an */
+	height: auto; /* Beibehaltung der Proportionen */
+	object-fit: contain; /* Sorgt für eine saubere Skalierung */
+}
+
+.arrowFlip{
+	width: 15%; /* Bild passt sich an die Breite des Containers an */
+	height: auto; /* Beibehaltung der Proportionen */
+	transform: rotate(180deg);
+	object-fit: contain; /* Sorgt für eine saubere Skalierung */
+}
+
+.karten{
+	width: 120%; /* Bild passt sich an die Breite des Containers an */
+	height: auto; /* Beibehaltung der Proportionen */
+	object-fit: contain; /* Sorgt für eine saubere Skalierung */
+}
+
+.figuren{	
+	width: 150%; /* Bild passt sich an die Breite des Containers an */
+	height: auto; /* Beibehaltung der Proportionen */
+	object-fit: contain; /* Sorgt für eine saubere Skalierung */
+}
+
+.beschreibung {
+	font-size: calc(1rem + 1vw *0.5); /* Schriftgröße passt sich dynamisch an */
+	font-family: 'Roboto';
+	color: #800020;
+}
