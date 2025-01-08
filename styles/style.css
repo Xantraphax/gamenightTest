@@ -17,10 +17,15 @@ p{
 	color: #800020;
 }
 
+img {
+  width: 100%;
+}
+
 /* Inhalt */
 .content {
 	width: 90%; /* Passt sich der Breite des Viewports an */
-	height: 90%; /* Passt sich der Höhe des Viewports an */ 	
+	height: 90%; /* Passt sich der Höhe des Viewports an */
+	min-height: 400px; 	
 	box-sizing: border-box; /* Schließt Padding und Rahmen in den Gesamtmaßen ein */
 	position: static; /* Erlaubt absolute Positionierung von Kindern */
 	text-align: center; /* Text im Container zentrieren */
@@ -31,7 +36,14 @@ p{
 	align-items: center; /* Zentriert vertikal */
 	gap: 1%;
 	flex-direction: column;
+	overflow: auto;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
 }
+
+.content::-webkit-scrollbar {
+  display: none;
+} 	
 
 .top-right{
 	display: flex;
@@ -105,4 +117,24 @@ p{
 	font-size: calc(1rem + 1vw *0.5); /* Schriftgröße passt sich dynamisch an */
 	font-family: 'Roboto';
 	color: #800020;
+}
+
+.photo-grid-container {
+  column-count: 5;
+  column-width: 300px;
+  max-height: 100%;
+ 
+
+}
+.photo-grid-item {
+  margin: 0 auto 15px;
+  max-width: 400px;
+  width: 100%;
+}
+#spieleliste{
+	max-height: 100%;
+    overflow-y: auto; /* Ermöglicht Scrollen innerhalb von #spieleliste */
+    padding: 10px;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
 }
